@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class EventHomeScreen extends StatelessWidget {
+  static String id = '/EventHomeScreen';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
