@@ -58,6 +58,10 @@ class HomePage extends StatelessWidget {
       color: Colors.red,
       day: 7,
     ),
+    ReusableHomePageButton(
+      color: Colors.deepPurple,
+      day: 8,
+    ),
   ];
 
   @override

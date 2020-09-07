@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:inspo_app/UI_Screens/Day8/Day8.dart';
 
 import 'Homepage.dart';
 import 'UI_Screens/Day1/Day1.dart';
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
         Day5.id: (context) => Day5(),
         Day6.id: (context) => Day6(),
         Day7.id: (context) => Day7(),
+        Day8.id: (context) => Day8(),
       },
     );
   }
