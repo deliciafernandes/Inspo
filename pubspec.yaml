@@ -21,6 +21,7 @@ dependencies:
   flutter_switch: ^0.1.0
   animator: ^2.0.1
   page_transition: ^1.1.6
+  flappy_search_bar: ^1.7.2
 
 dev_dependencies:
   flutter_test:

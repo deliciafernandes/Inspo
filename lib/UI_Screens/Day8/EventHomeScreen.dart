@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flappy_search_bar/flappy_search_bar.dart';
 
 class EventHomeScreen extends StatelessWidget {
   static String id = '/EventHomeScreen';
@@ -26,6 +28,34 @@ class EventHomeScreen extends StatelessWidget {
             ),
           ),
         ],
+      ),
+      body: Padding(
+        padding:
+            EdgeInsets.only(left: 20.0, right: 20.0, top: 20.0, bottom: 40.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            // SearchBar(
+            //   onSearch: (String text) {},
+            //   onItemFound: (item, int index) {},
+            // ),
+            Expanded(
+              child: ListView(
+                shrinkWrap: true,
+                scrollDirection: Axis.vertical,
+                children: [
+                  Container(
+                    width: MediaQuery.of(context).size.width,
+                    height: 220.0,
+                    decoration: BoxDecoration(
+                      color: Colors.black54,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
