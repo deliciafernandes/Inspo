@@ -337,15 +337,12 @@ class _Day5State extends State<Day5> {
           });
         },
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home), title: Text('Home')),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(icon: Icon(MyFlutterApp.doc), label: 'News'),
           BottomNavigationBarItem(
-              icon: Icon(MyFlutterApp.doc), title: Text('News')),
+              icon: Icon(Icons.star_border, size: 30.0), label: 'Watchlist'),
           BottomNavigationBarItem(
-              icon: Icon(Icons.star_border, size: 30.0),
-              title: Text('Watchlist')),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.perm_identity, size: 30.0),
-              title: Text('Profile')),
+              icon: Icon(Icons.perm_identity, size: 30.0), label: 'Profile'),
         ],
       ),
     );
