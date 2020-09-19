@@ -19,8 +19,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       // initialRoute: HomePage.id,
-      // initialRoute: Day8.id,
-      initialRoute: EventHomeScreen.id,
+      initialRoute: Day8.id,
+      // initialRoute: EventHomeScreen.id,
       routes: {
         HomePage.id: (context) => HomePage(),
         Day1.id: (context) => Day1(),

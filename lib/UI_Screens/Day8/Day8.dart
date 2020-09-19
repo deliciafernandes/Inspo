@@ -1,9 +1,47 @@
 import 'package:flutter/material.dart';
 import 'package:inspo_app/UI_Screens/Day8/EventHomeScreen.dart';
+import 'package:page_transition/page_transition.dart';
 import 'animations/FadeAnimationYbottom.dart';
 
-class Day8 extends StatelessWidget {
+class Day8 extends StatefulWidget {
   static String id = '/8';
+
+  @override
+  _Day8State createState() => _Day8State();
+}
+
+class _Day8State extends State<Day8> with SingleTickerProviderStateMixin {
+  AnimationController _scaleController;
+
+  Animation<double> _scaleAnimation;
+
+  bool hide = false;
+
+  @override
+  void initState() {
+    super.initState();
+
+    _scaleController =
+        AnimationController(vsync: this, duration: Duration(milliseconds: 300));
+
+    _scaleAnimation =
+        Tween<double>(begin: 1.0, end: 30.0).animate(_scaleController)
+          ..addStatusListener((status) {
+            if (status == AnimationStatus.completed) {
+              Navigator.push(
+                  context,
+                  PageTransition(
+                      child: EventHomeScreen(), type: PageTransitionType.fade));
+            }
+          });
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+
+    _scaleController.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -58,13 +96,7 @@ class Day8 extends StatelessWidget {
                       elevation: 3.0,
                       padding: EdgeInsets.symmetric(
                           horizontal: 20.0, vertical: 15.0),
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => EventHomeScreen()),
-                        );
-                      },
+                      onPressed: () {},
                       color: Color(0xffF8C145),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(25.0),
