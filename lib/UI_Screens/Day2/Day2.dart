@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:inspo_app/UI_Screens/Day2/utilities/PageScreen.dart';
+
+import 'PageScreen.dart';
 
 class Day2 extends StatefulWidget {
   static String id = '/2';

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:inspo_app/UI_Screens/Day2/animations/FadeInAnimationY.dart';
 import 'VideoCard.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:inspo_app/UI_Screens/Day2/utilities/FadeInAnimationY.dart';
 
 const TextStyle kTitleTextStyle = TextStyle(
   fontWeight: FontWeight.bold,
