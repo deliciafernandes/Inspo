@@ -1,3 +1,4 @@
+import 'package:flappy_search_bar/search_bar_style.dart';
 import 'package:flutter/material.dart';
 import 'package:inspo_app/UI_Screens/Day2/animations/FadeInAnimationY.dart';
 import 'models/Event.dart';
@@ -37,10 +38,6 @@ class EventHomeScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            // SearchBar(
-            //   onSearch: (String text) {},
-            //   onItemFound: (item, int index) {},
-            // ),
             Expanded(
               child: FadeAnimationY(
                 delay: 0.5,
