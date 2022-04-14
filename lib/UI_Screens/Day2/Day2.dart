@@ -10,7 +10,7 @@ class Day2 extends StatefulWidget {
 }
 
 class _Day2State extends State<Day2> {
-  PageController _controller;
+  late PageController _controller;
   int _currentPage = 0;
 
   @override

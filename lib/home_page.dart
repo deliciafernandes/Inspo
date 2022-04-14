@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+
 import 'components/ReusableUIButton.dart';
 
-// ignore: must_be_immutable
-class HomePage extends StatelessWidget {
-  static String id = '/';
+class HomePage extends StatefulWidget {
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
 
+class _HomePageState extends State<HomePage> {
   List<Widget> _list = [
     Text(
       '${DateFormat("EEEE d LLLL").format(DateTime.now()).toUpperCase()}',
@@ -47,7 +50,7 @@ class HomePage extends StatelessWidget {
       day: 4,
     ),
     ReusableHomePageButton(
-      color: Colors.yellow[500],
+      color: Colors.yellow,
       day: 5,
     ),
     ReusableHomePageButton(

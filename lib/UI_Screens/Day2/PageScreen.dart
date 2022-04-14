@@ -16,7 +16,7 @@ class PageScreen extends StatefulWidget {
 class _PageScreenState extends State<PageScreen>
     with SingleTickerProviderStateMixin {
   final int totalPlaces = info.getTotalPlaceNumber();
-  AnimationController controller;
+  late AnimationController controller;
 
   String buttonText = 'READ MORE';
   bool _toggle = true;

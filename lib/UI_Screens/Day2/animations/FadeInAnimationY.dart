@@ -5,7 +5,7 @@ class FadeAnimationY extends StatelessWidget {
   final double delay;
   final Widget child;
 
-  FadeAnimationY({this.delay, this.child});
+  FadeAnimationY({required this.delay, required this.child});
 
   @override
   Widget build(BuildContext context) {
@@ -23,9 +23,9 @@ class FadeAnimationY extends StatelessWidget {
       tween: tween,
       child: child,
       builderWithChild: (context, child, animation) => Opacity(
-        opacity: animation['opacity'],
+        opacity: 0.5,
         child: Transform.translate(
-          offset: Offset(0, animation['translateY']),
+          offset: Offset(0, 15.0), //TODO: to change
           child: child,
         ),
       ),

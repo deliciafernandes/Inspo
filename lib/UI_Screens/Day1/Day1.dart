@@ -10,7 +10,7 @@ class Day1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomPadding: false,
+      resizeToAvoidBottomInset: false,
       backgroundColor: kScaffoldColor,
       appBar: AppBar(
         backgroundColor: kAppBarColor,
