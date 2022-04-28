@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:inspo_app/UI_Screens/Day2/animations/FadeInAnimationY.dart';
-import 'VideoCard.dart';
 import 'package:url_launcher/url_launcher.dart';
+
+import '../Day2/animations/FadeInAnimationY.dart';
+import 'VideoCard.dart';
 
 const TextStyle kTitleTextStyle = TextStyle(
   fontWeight: FontWeight.bold,
@@ -196,13 +197,15 @@ class Day4 extends StatelessWidget {
           Align(
             alignment: Alignment.bottomCenter,
             heightFactor: 16.0,
-            child: FlatButton(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(45.0),
+            child: TextButton(
+              style: TextButton.styleFrom(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(45.0),
+                ),
+                backgroundColor: Color(0xffF8C145),
+                primary: Color(0xffF8C145).withOpacity(.9),
+                padding: EdgeInsets.symmetric(horizontal: 100, vertical: 15.0),
               ),
-              color: Color(0xffF8C145),
-              splashColor: Color(0xffF8C145).withOpacity(.9),
-              padding: EdgeInsets.symmetric(horizontal: 100, vertical: 15.0),
               onPressed: () {
                 //Follow functionality
                 launch('https://www.instagram.com/michelleobama/');
