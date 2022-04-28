@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:animator/animator.dart';
+import 'package:flutter/material.dart';
 
 class Day6 extends StatefulWidget {
   static const String id = '/6';
@@ -9,7 +9,7 @@ class Day6 extends StatefulWidget {
 }
 
 class _Day6State extends State<Day6> {
-  List<bool> isClicked;
+  late List<bool> isClicked;
   List destinations = [
     {
       'url':
@@ -133,14 +133,14 @@ class MapListViewTile extends StatelessWidget {
   final String distance;
   final String destinationName;
   final bool isClicked;
-  final Function onTap;
+  final VoidCallback onTap;
 
   MapListViewTile(
-      {@required this.url,
-      @required this.distance,
-      @required this.destinationName,
-      this.isClicked,
-      this.onTap});
+      {required this.url,
+      required this.distance,
+      required this.destinationName,
+      required this.isClicked,
+      required this.onTap});
 
   @override
   Widget build(BuildContext context) {
