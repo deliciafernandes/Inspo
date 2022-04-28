@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import '../Day2/animations/FadeInAnimationY.dart';
+import '../Day2/FadeInAnimationY.dart';
 import 'VideoCard.dart';
 
 const TextStyle kTitleTextStyle = TextStyle(

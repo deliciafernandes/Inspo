@@ -4,33 +4,35 @@ import 'package:intl/intl.dart';
 import 'components/ReusableUIButton.dart';
 
 class HomePage extends StatefulWidget {
+  const HomePage({Key? key}) : super(key: key);
+
   @override
   State<HomePage> createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
-  List<Widget> _list = [
+  final List<Widget> _list = [
     Text(
-      '${DateFormat("EEEE d LLLL").format(DateTime.now()).toUpperCase()}',
-      style: TextStyle(
+      DateFormat("EEEE d LLLL").format(DateTime.now()).toUpperCase(),
+      style: const TextStyle(
         color: Colors.grey,
         fontSize: 15.0,
         fontWeight: FontWeight.w600,
       ),
     ),
-    Text(
+    const Text(
       '100 DAYS UI CHALLENGE',
       style: TextStyle(
           fontWeight: FontWeight.w800, fontSize: 18.0, color: Colors.grey),
     ),
-    Text(
+    const Text(
       'Welcome back, Delicia !',
       style: TextStyle(
         fontWeight: FontWeight.bold,
         fontSize: 30.0,
       ),
     ),
-    SizedBox(
+    const SizedBox(
       height: 20.0,
     ),
     ReusableHomePageButton(
@@ -73,7 +75,7 @@ class _HomePageState extends State<HomePage> {
       body: SafeArea(
         child: ListView(
           shrinkWrap: true,
-          padding: EdgeInsets.only(left: 20.0, right: 20.0),
+          padding: const EdgeInsets.only(left: 20.0, right: 20.0),
           children: _list,
         ),
       ),

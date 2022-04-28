@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 
 import 'EventHomeScreen.dart';
-import 'animations/FadeAnimationYbottom.dart';
+import 'FadeAnimationYbottom.dart';
 
 class Day8 extends StatefulWidget {
   static String id = '/8';

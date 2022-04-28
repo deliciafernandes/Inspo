@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../Day2/animations/FadeInAnimationY.dart';
+import '../Day2/FadeInAnimationY.dart';
 import 'models/Event.dart';
 
 final EventDetails _details = EventDetails();

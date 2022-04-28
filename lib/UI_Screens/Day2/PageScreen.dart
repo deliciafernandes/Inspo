@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'animations/FadeInAnimationY.dart';
+
+import 'FadeInAnimationY.dart';
 import 'models/Info.dart';
 
 Info info = Info();
