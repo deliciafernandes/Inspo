@@ -5,7 +5,7 @@ class FadeAnimationX extends StatelessWidget {
   final double delay;
   final Widget child;
 
-  FadeAnimationX({this.delay, this.child});
+  FadeAnimationX({required this.delay, required this.child});
 
   @override
   Widget build(BuildContext context) {

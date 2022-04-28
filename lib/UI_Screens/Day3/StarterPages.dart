@@ -8,7 +8,7 @@ class StarterPages extends StatefulWidget {
 }
 
 class _StarterPagesState extends State<StarterPages> {
-  List<bool> isSelected;
+  late List<bool> isSelected;
   List<String> foodItems = ['Pizza', 'Burger', 'Kebab', 'Dessert', 'Salad'];
 
   @override
@@ -61,7 +61,7 @@ class _StarterPagesState extends State<StarterPages> {
                   return TButton(
                       isClicked: isSelected[entry.key],
                       foodItem: entry.value,
-                      onPressed: () {
+                      onPressedFunction: () {
                         setState(() {
                           isSelected[entry.key] = !isSelected[entry.key];
                         });
@@ -110,6 +110,7 @@ class _StarterPagesState extends State<StarterPages> {
 
 class FoodCard extends StatelessWidget {
   FoodCard(this.url);
+
   final String url;
 
   @override
@@ -190,13 +191,13 @@ class TButton extends StatelessWidget {
   final bool isClicked;
   final String foodItem;
 
-  /// OnPressed is passed from the parent. This can be changed to handle it using any state management.
-  final Function onPressed;
+  /// onPressedFunction is passed from the parent. This can be changed to handle it using any state management.
+  final VoidCallback onPressedFunction;
 
   TButton(
-      {@required this.isClicked,
-      @required this.foodItem,
-      @required this.onPressed});
+      {required this.isClicked,
+      required this.foodItem,
+      required this.onPressedFunction});
 
   @override
   Widget build(BuildContext context) {
@@ -206,12 +207,14 @@ class TButton extends StatelessWidget {
         color: isClicked ? Colors.orange[300] : Colors.white,
         borderRadius: BorderRadius.circular(30.0),
       ),
-      child: FlatButton(
-        splashColor: Colors.orange[300],
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(30.0),
+      child: TextButton(
+        style: TextButton.styleFrom(
+          primary: Colors.orange[300],
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(30.0),
+          ),
         ),
-        onPressed: onPressed,
+        onPressed: onPressedFunction,
         child: Padding(
           padding: EdgeInsets.symmetric(
             horizontal: 20.0,
