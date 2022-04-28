@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:inspo_app/UI_Screens/Day8/EventHomeScreen.dart';
 import 'package:page_transition/page_transition.dart';
+
+import 'EventHomeScreen.dart';
 import 'animations/FadeAnimationYbottom.dart';
 
 class Day8 extends StatefulWidget {
@@ -11,9 +12,8 @@ class Day8 extends StatefulWidget {
 }
 
 class _Day8State extends State<Day8> with SingleTickerProviderStateMixin {
-  AnimationController _scaleController;
-
-  Animation<double> _scaleAnimation;
+  late AnimationController _scaleController;
+  late Animation<double> _scaleAnimation;
 
   bool hide = false;
 
@@ -92,15 +92,17 @@ class _Day8State extends State<Day8> with SingleTickerProviderStateMixin {
                       style: TextStyle(fontSize: 20.0, color: Colors.white70),
                     ),
                     SizedBox(height: 230.0),
-                    RaisedButton(
-                      elevation: 3.0,
-                      padding: EdgeInsets.symmetric(
-                          horizontal: 20.0, vertical: 15.0),
-                      onPressed: () {},
-                      color: Color(0xffF8C145),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(25.0),
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        elevation: 3.0,
+                        primary: Color(0xffF8C145),
+                        padding: EdgeInsets.symmetric(
+                            horizontal: 20.0, vertical: 15.0),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(25.0),
+                        ),
                       ),
+                      onPressed: () {},
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
