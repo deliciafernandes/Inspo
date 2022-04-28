@@ -1,8 +1,7 @@
-import 'package:flappy_search_bar/search_bar_style.dart';
 import 'package:flutter/material.dart';
-import 'package:inspo_app/UI_Screens/Day2/animations/FadeInAnimationY.dart';
+
+import '../Day2/animations/FadeInAnimationY.dart';
 import 'models/Event.dart';
-import 'package:flappy_search_bar/flappy_search_bar.dart';
 
 final EventDetails _details = EventDetails();
 
@@ -62,7 +61,7 @@ class EventHomeScreen extends StatelessWidget {
 class EventListTile extends StatelessWidget {
   final int eventNumber;
 
-  EventListTile({this.eventNumber});
+  EventListTile({required this.eventNumber});
 
   @override
   Widget build(BuildContext context) {

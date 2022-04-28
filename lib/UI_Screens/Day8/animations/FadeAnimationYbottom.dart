@@ -5,7 +5,7 @@ class FadeAnimationYDownToUp extends StatelessWidget {
   final double delay;
   final Widget child;
 
-  FadeAnimationYDownToUp({this.delay, this.child});
+  FadeAnimationYDownToUp({required this.delay, required this.child});
 
   @override
   Widget build(BuildContext context) {

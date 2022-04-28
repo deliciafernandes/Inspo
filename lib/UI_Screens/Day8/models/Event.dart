@@ -5,7 +5,11 @@ class Event {
   String time;
   String imageUrl;
 
-  Event({this.name, this.date, this.time, this.imageUrl});
+  Event(
+      {required this.name,
+      required this.date,
+      required this.time,
+      required this.imageUrl});
 }
 
 class EventDetails {
