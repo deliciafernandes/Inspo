@@ -12,13 +12,13 @@ class ButtonAnimation extends StatefulWidget {
 
 class _ButtonAnimationState extends State<ButtonAnimation>
     with TickerProviderStateMixin {
-  AnimationController _animationController;
-  AnimationController _scaleAnimationController;
-  AnimationController _fadeAnimationController;
+  late AnimationController _animationController;
+  late AnimationController _scaleAnimationController;
+  late AnimationController _fadeAnimationController;
 
-  Animation<double> _animation;
-  Animation<double> _scaleAnimation;
-  Animation<double> _fadeAnimation;
+  late Animation<double> _animation;
+  late Animation<double> _scaleAnimation;
+  late Animation<double> _fadeAnimation;
 
   double buttonWidth = 200.0;
   double scale = 1.0;
@@ -60,15 +60,15 @@ class _ButtonAnimationState extends State<ButtonAnimation>
 
     _animation = Tween<double>(begin: 0.0, end: buttonWidth)
         .animate(_animationController)
-          ..addStatusListener((status) {
-            if (status == AnimationStatus.completed) {
-              setState(() {
-                animationComplete = true;
-                barColorOpacity = .0;
-                _completed = true;
-              });
-            }
+      ..addStatusListener((status) {
+        if (status == AnimationStatus.completed) {
+          setState(() {
+            animationComplete = true;
+            barColorOpacity = .0;
+            _completed = true;
           });
+        }
+      });
   }
 
   @override

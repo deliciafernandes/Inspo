@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_switch/flutter_switch.dart';
+
 import 'ButtonAnimation.dart';
 import 'my_flutter_app_icons.dart';
 
@@ -149,9 +149,9 @@ class _Day5State extends State<Day5> {
                     elevation: 16,
                     style: TextStyle(color: Color(0xffa2a2a2)),
                     value: dropdownValue,
-                    onChanged: (String newValue) {
+                    onChanged: (newValue) {
                       setState(() {
-                        dropdownValue = newValue;
+                        dropdownValue = newValue!;
                       });
                     },
                     items: <String>[
@@ -309,15 +309,17 @@ class _Day5State extends State<Day5> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  ButtonAnimation(Colors.blueAccent[100], Colors.blueAccent),
+                  ButtonAnimation(
+                      Colors.blueAccent.shade100, Colors.blueAccent),
                   SizedBox(
                     height: 20,
                   ),
-                  ButtonAnimation(Colors.pinkAccent[100], Colors.pinkAccent),
+                  ButtonAnimation(
+                      Colors.pinkAccent.shade100, Colors.pinkAccent),
                   SizedBox(
                     height: 20,
                   ),
-                  ButtonAnimation(Colors.purpleAccent[100], Colors.purple),
+                  ButtonAnimation(Colors.purpleAccent.shade100, Colors.purple),
                 ],
               ),
             ),
